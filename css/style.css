@@ -9,7 +9,7 @@ body {
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0),
-    rgba(160, 163, 160, 0.6)
+    rgba(206, 208, 206, 0.6)
   );
 }
 
@@ -51,6 +51,8 @@ body {
   margin-left: 20px;
   font-weight: 500;
   font-size: larger;
+  text-decoration: none;
+
 }
 .page-container {
   display: flex;
@@ -86,6 +88,16 @@ body {
   flex-shrink: inherit;
   /* overflow: auto; */
 }
+
+@media only screen and (max-width: 430px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+  }
+}
+
+
 .card {
   display: flex;
   flex-direction: column;
@@ -112,3 +124,6 @@ body {
   bottom: 5px;
   justify-content: center;
 }
+
+
+
