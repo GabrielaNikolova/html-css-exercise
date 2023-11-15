@@ -9,11 +9,11 @@ body {
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0),
-    rgba(160, 163, 160, 0.6)
+    rgba(206, 208, 206, 0.6)
   );
 }
 
-.page-header{
+.page-header {
   display: flex;
   flex-direction: row;
   top: 0px;
@@ -37,8 +37,6 @@ body {
   background-color: transparent;
   border-bottom: 3px solid;
   border-color: rgb(91, 86, 79);
-
-
 }
 .nav-links {
   display: flex;
@@ -51,6 +49,7 @@ body {
   margin-left: 20px;
   font-weight: 500;
   font-size: larger;
+  text-decoration: none;
 }
 .page-container {
   display: flex;
@@ -70,35 +69,40 @@ body {
   align-self: center;
   text-decoration: underline;
 }
-.sights {
+/* .sights {
   display: flex;
   flex-direction: column;
-}
+
+} */
 .sights h2 {
-  align-self: center;
+  /* align-self: center; */
+  text-align: center;
   text-decoration: underline;
 }
 
 .cards-container {
   display: flex;
-  flex-direction: row;
-  flex-flow: row;
-  flex-shrink: inherit;
-  /* overflow: auto; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-wrap:wrap; */
 }
+
 .card {
   display: flex;
   flex-direction: column;
   margin: 10px;
   border: 3px solid;
   border-color: rgb(255, 141, 3);
-  min-width: 300px;
+  max-width: 20%;
+  flex: 0 1 auto;
 }
 .card-img {
   min-width: 100px;
   max-width: 100%;
   height: auto;
 }
+
 .card-title,
 .card-body {
   padding: 5px;
@@ -111,4 +115,14 @@ body {
   top: 20px;
   bottom: 5px;
   justify-content: center;
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    flex-direction: column;
+  }
+  .cards-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
