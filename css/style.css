@@ -13,7 +13,7 @@ body {
   );
 }
 
-.page-header{
+.page-header {
   display: flex;
   flex-direction: row;
   top: 0px;
@@ -37,8 +37,6 @@ body {
   background-color: transparent;
   border-bottom: 3px solid;
   border-color: rgb(91, 86, 79);
-
-
 }
 .nav-links {
   display: flex;
@@ -52,7 +50,6 @@ body {
   font-weight: 500;
   font-size: larger;
   text-decoration: none;
-
 }
 .page-container {
   display: flex;
@@ -72,31 +69,24 @@ body {
   align-self: center;
   text-decoration: underline;
 }
-.sights {
+/* .sights {
   display: flex;
   flex-direction: column;
-}
+
+} */
 .sights h2 {
-  align-self: center;
+  /* align-self: center; */
+  text-align: center;
   text-decoration: underline;
 }
 
 .cards-container {
   display: flex;
-  flex-direction: row;
-  flex-flow: row;
-  flex-shrink: inherit;
-  /* overflow: auto; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-wrap:wrap; */
 }
-
-@media only screen and (max-width: 430px) {
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column;
-  }
-}
-
 
 .card {
   display: flex;
@@ -104,13 +94,15 @@ body {
   margin: 10px;
   border: 3px solid;
   border-color: rgb(255, 141, 3);
-  min-width: 300px;
+  max-width: 20%;
+  flex: 0 1 auto;
 }
 .card-img {
   min-width: 100px;
   max-width: 100%;
   height: auto;
 }
+
 .card-title,
 .card-body {
   padding: 5px;
@@ -125,5 +117,12 @@ body {
   justify-content: center;
 }
 
-
-
+@media screen and (max-width: 430px) {
+  body {
+    flex-direction: column;
+  }
+  .cards-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
